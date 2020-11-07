@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+	xsetroot -name " | Vol: ""$(pamixer --get-volume-human | tr -d '%')"" | ""$(free -h | awk '(NR == 2) {print $1, $3}')"" | ""$(date +"%I:%M %p")"
+	sleep 1s
+done
