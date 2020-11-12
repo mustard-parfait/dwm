@@ -1,0 +1,98 @@
+env:
+    TERM: alacritty
+
+window:
+
+  padding:
+    x: 6
+    y: 6
+  
+  dynamic_padding: true
+
+  title: Alacritty
+
+  decorations: full
+  
+  class:
+    instance: Alacritty
+    general: Alacritty
+  
+scrolling:
+  history: 5000
+
+font:
+  normal:
+    family: Terminus
+    style: Regular
+
+  bold:
+    family: Terminus
+    style: Bold
+
+  italic:
+    family: Terminus
+    style: Italic
+
+  bold_italic:
+    family: Terminus
+    style: Bold Italic
+
+  size: 8.0
+
+  offset:
+    x: 1
+    y: 1
+
+colors:
+  primary:
+    background: '0x0d0609'
+    foreground: '0xddc8b0'
+    cursor: '0xddc8b0'
+
+  selection:
+    text: '0x0B0E15'
+    background: '0xd4d8e0'
+
+  # Normal colors
+  normal:
+    black:   '0x0d0609'
+    red:     '0x5B4856'
+    green:   '0x8F2C2D'
+    yellow:  '0xA52D2D'
+    blue:    '0xB14B44'
+    magenta: '0xDB644F'
+    cyan:    '0xF29163'
+    white:   '0xddc8b0'
+
+  # Bright colors
+  bright:
+    black:   '0x9a8c7b'
+    red:     '0x5B4856'
+    green:   '0x8F2C2D'
+    yellow:  '0xA52D2D'
+    blue:    '0xB14B44'
+    magenta: '0xDB644F'
+    cyan:    '0xF29163'
+    white:   '0xddc8b0'
+
+background_opacity: 0.8
+
+key_bindings:
+  - { key: V,        mods: Control|Shift, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+
+  - { key: Paste,                    action: Paste                            }
+  - { key: Copy,                     action: Copy                             }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+
